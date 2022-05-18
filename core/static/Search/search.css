@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+  }
+  body{
+      background-color: #f3fcff;
+  }
+  #myInput {
+    background-image: url('/css/drs.jpg');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  #myTable {
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+  }
+
+  #myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+  }
+
+  #myTable tr {
+    border-bottom: 1px solid #ddd;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+  }
+
+
+#data{
+    margin-top: 20px;
+}
+
+
+
+.nav2{
+    overflow: hidden;
+    background-color: #051367;
+    position:fixed;
+    width: 100%;
+    margin: -20px -8px  0px;
+  }
+
+  .nav2 a{
+    color:#DFF6FF
+  }
+
+  ul a{
+    float: left;
+    display: flex;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 15px;
+    font-size: 20px;
+  }
+
+  a.active , a:hover{
+    background: #c9d3db;
+    transition: .5s;
+  }
+
+
+
+  .grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 50px 50px 50px;
+    gap: 10px;
+    padding: 10px;
+    border:solid 2px;
+    box-shadow: #000000;
+    margin-top: 10px;
+    border-style: inset;
+    border-radius: 4px;
+    transition: .5s;
+
+  }
+
+  .grid-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+
+  #PatientId{
+    width:250%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    color: rgb(11, 12, 12);
+    border-bottom: 1px solid rgba(97, 95, 95, 0.295);
+    outline: none;
+    background: transparent;
+    color: rgb(19, 4, 4);
+    font-size: 18px;
+   }
+
+   #PatientName{
+    width:250%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    color: rgb(11, 12, 12);
+    border-bottom: 1px solid rgba(97, 95, 95, 0.295);
+    outline: none;
+    background: transparent;
+    color: rgb(19, 4, 4);
+    font-size: 18px;
+
+}
+
+#age{
+    width:250%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    color: rgb(11, 12, 12);
+    border-bottom: 1px solid rgba(97, 95, 95, 0.295);
+    outline: none;
+    background: transparent;
+    color: rgb(19, 4, 4);
+    font-size: 18px;
+
+}
+
+#Gender{
+    width:250%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    color: rgb(11, 12, 12);
+    border-bottom: 1px solid rgba(97, 95, 95, 0.295);
+    outline: none;
+    background: transparent;
+    color: rgb(19, 4, 4);
+    font-size: 18px;
+
+}
+
+#History{
+    width:250%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    color: rgb(11, 12, 12);
+    border-bottom: 1px solid rgba(97, 95, 95, 0.295);
+    outline: none;
+    background: transparent;
+    color: rgb(19, 4, 4);
+    font-size: 18px;
+
+}

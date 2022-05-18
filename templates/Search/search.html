@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'Search/search.css' %}">
+  {% load static %}
+  <script src="{% static 'Searchjs/search.js' %}"></script>
+
+
+</head>
+<body>
+<!-- nav bar-->
+<nav class="nav2">
+    <ul style="list-style-type: none;">
+        <li><a href="http://127.0.0.1:8000/Home/">Home</a></li>
+        <li><a href="http://127.0.0.1:8000/Home/">about us</a></li>
+        <li><a href="http://127.0.0.1:8000/New-Patiant/">new Patient</a></li>
+        <li><a class="active" href="C:\Users\Carlos\Django\projects\mysite\templates\Search\search.html">Search</a></li>
+    </ul>
+  </nav>
+
+
+  <h2>My Customers</h2>
+
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for patient name.." title="Type in a name">
+  <div style="height:300px; overflow-y: scroll;">
+  <table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">ID</th>
+      <th style="width:40%;">Name</th>
+    </tr>
+    <tr>
+      <td>1234</td>
+      <td>kirolos</td>
+    </tr>
+    <tr>
+      <td>5678</td>
+      <td>carol</td>
+    </tr>
+    <tr>
+      <td>3423342</td>
+      <td>michael</td>
+    </tr>
+    <tr>
+      <td>3423242342434424</td>
+      <td>carlosssssssssssdasdsa</td>
+    </tr>
+    <tr>
+      <td>345678</td>
+      <td>marina</td>
+    </tr>
+    <tr>
+      <td>3544645</td>
+      <td>miand</td>
+    </tr>
+    <tr>
+      <td>3465645</td>
+      <td>youstina</td>
+    </tr>
+
+
+  </table>
+</div>
+
+
+<div class="grid-container">
+<div>PatientId:<input type="text" name="PatientId" id="PatientId" readonly > <br><br></div>
+<div>PatientName:<input type="text" name="PatientName" id="PatientName" readonly> <br><br></div>
+<div>Age:<input type="text" name="age" id="age" readonly> <br><br></div>
+<div>Gender:<input type="text" name="Gender" id="Gender" readonly> <br><br></div>
+<div>History:<input type="text" name="History" id="History" readonly> <br><br></div>
+</div>
+
+
+
+
+<script src="C:\Users\Carlos\Django\projects\mysite\mysite\static\Searchjs\search.js"></script>
+<script> var table = document.getElementById('myTable');
+
+
+
+  for(var i = 1; i < table.rows.length; i++)
+  {
+      table.rows[i].onclick = function()
+      {
+           //rIndex = this.rowIndex;
+           document.getElementById("PatientId").value = this.cells[0].innerHTML;
+           document.getElementById("PatientName").value = this.cells[1].innerHTML;
+           document.getElementById("age").value = this.cells[2].innerHTML;
+           document.getElementById("Gender").value = this.cells[3].innerHTML;
+           document.getElementById("History").value = this.cells[4].innerHTML;
+      };
+  }
+</script>
+</body>
+</html>

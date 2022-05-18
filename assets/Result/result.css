@@ -1,0 +1,53 @@
+body {
+    background-color:#DFF6FF;
+  }
+
+  .w3-container h2{
+    margin: 80px 0px 0px;
+    text-align: center;
+    color: #051367;
+    background-color: #5D8BF4;
+    padding: 5px;
+  }
+  .w3-card-4{
+    margin-left: 35%;
+  }
+
+
+#treat{
+  text-align: center;
+  color: #051367;
+  background-color: #5D8BF4;
+  padding: 5px;
+}
+
+.w3-content h2{
+  margin: 0px 0px 0px;
+}
+
+
+.nav2{
+  overflow: hidden;
+  background-color: #051367;
+  position:fixed;
+  width: 100%;
+}
+
+.nav2 a{
+  color:#DFF6FF
+}
+
+ul a{
+  float: left;
+  display: flex;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px 15px;
+  font-size: 20px;
+}
+
+a.active , a:hover{
+  background: #c9d3db;
+  transition: .5s;
+}

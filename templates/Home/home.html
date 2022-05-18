@@ -1,0 +1,140 @@
+
+<HTMl>
+<head>
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Home/home.css' %}">
+
+    <title>
+        Home Page
+    </title>
+</head>
+    <body class="flex">
+        <nav class="nav">
+            <ul id="navbar__list" style="list-style-type: none;">
+            </ul>
+        </nav>
+    <div>
+
+        </div>
+        <section id="Home" class="scroll">
+            <h1 id="s1">
+                Home
+            </h1>
+            <p>
+                <video width="1150px" height="450" controls>
+                    <source src="C:\Users\Carlos\Django\projects\mysite\templates\Home\Carlos.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+            </p>
+        </section>
+
+        <div id="New Patient" class="new" >
+        </div>
+
+        <div id="Search" class="new" >
+         </div>
+
+        <section  id="About us"  class="scroll">
+            <h1 id="s4">
+                About us
+            </h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque nesciunt amet iure atque at cum numquam incidunt quam aspernatur alias quibusdam pariatur, doloribus ipsa! Ea ut alias perspiciatis sequi atque?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque nesciunt amet iure atque at cum numquam incidunt quam aspernatur alias quibusdam pariatur, doloribus ipsa! Ea ut alias perspiciatis sequi atque?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque nesciunt amet iure atque at cum numquam incidunt quam aspernatur alias quibusdam pariatur, doloribus ipsa! Ea ut alias perspiciatis sequi atque?
+
+            </p>
+        </section>
+
+     <script > let ul=document.getElementById("navbar__list");
+        var fragment = document.createDocumentFragment();
+        
+        let sections = document.querySelectorAll("section");
+        let other = [...document.getElementsByClassName("new")];
+        console.log(other)
+        
+        //for sections
+        sections.forEach(element => {
+            let listItem = document.createElement("li");
+            let link = document.createElement("a");
+        
+            link.textContent = element.id
+        
+          link.addEventListener("click", function(){
+            element.scrollIntoView({
+              block: 'start',
+              behavior: 'smooth'
+            })
+        })
+            listItem.appendChild(link)
+            fragment.appendChild(listItem)
+        });
+        
+        //for newP&search
+        other.forEach(element => {
+          console.log(other)
+          let listItem = document.createElement("li");
+          let link = document.createElement("a");
+          link.textContent = element.id
+          //console.log(element.id)
+          listItem.appendChild(link)
+          fragment.appendChild(listItem)
+          if (element.id=="Search") {
+            link.addEventListener("click", function()
+            {
+              window.location = "http://127.0.0.1:8000/Search/";
+            })
+          }
+          if (element.id=="New Patient") {
+            link.addEventListener("click", function()
+            {
+              window.location = "http://127.0.0.1:8000/New-Patiant/";
+            })
+          }
+        });
+        ul.appendChild(fragment)
+        
+        window.addEventListener("scroll", e =>
+        { sections.forEach(section =>
+          {const sectionTitle = section.getAttribute("data-nav");
+             const rect = section.getBoundingClientRect();
+             const links = document.querySelectorAll("a");
+              if(rect.top >= 0 && rect.top <= 300)
+              {
+               section.classList.add("your-active-link");
+               links.forEach(link =>
+                {
+                  if(link.textContent === section.id){
+                    link.classList.add("active-link");
+                  }
+                  else{
+                    link.classList.remove("active-link");
+                  }
+                  })
+              }
+              else{
+                section.classList.remove("your-active-link");
+              }
+          })
+        })
+    
+        function run(){
+
+            var URL = " file:///C:\Users\Carlos\Django\projects\mysite\templates\Home\Carlos.mp4";
+         
+            window.open(URL, null);
+         
+         }
+         run();
+    
+    
+    
+    
+    
+    </script>
+        
+    </body>
+
+
+</HTMl>

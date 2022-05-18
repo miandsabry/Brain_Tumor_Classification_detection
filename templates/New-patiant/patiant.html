@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'New-patiant/patiant.css' %}">
+    <title>Brain Tumor Detection</title>
+
+</head>
+<body class="flex-container">
+  <div class="up">
+  <nav class="nav2" style="margin: top 0;">
+    <ul style="list-style-type: none;">
+        <li><a href="http://127.0.0.1:8000/Home/">Home</a></li>
+        <li><a href="http://127.0.0.1:8000/Home/">About us</a></li>
+        <li><a class="active" href="G:\html proj\index.html">New patient</a></li>
+        <li><a href="http://127.0.0.1:8000/Search/">Search</a></li>
+    </ul>
+</nav>
+  </div>
+  <div class="down">
+    <h1 class="header">Kindly fill the form!</h1>
+    <div class="displayflex">
+    <div class="sec1">
+        <label class="loon_labels">UserName</label><br> <input type="text" id="name" placeholder="Enter your name">
+        <br>
+        <label class="loon_labels">Age</label>  <br> <input type="number" id="age" placeholder="Enter your age">
+    </div>
+    <div class="sec2">
+<div id="rd1">
+    <label class="loon_labels" for="yes_no_radio">Blood pressure</label>
+  <p>
+  <input type="radio" name="yes_no1">Yes</input>
+  </p>
+  <p>
+  <input type="radio" name="yes_no1">No</input>
+  </p>
+  </div>
+  <div id="rd2">
+    <label  class="loon_labels" for="yes_no_radio">Blood pressure</label>
+  <p>
+  <input type="radio" name="yes_no2">Yes</input>
+  </p>
+  <p>
+  <input type="radio" name="yes_no2">No</input>
+  </p>
+  </div>
+
+  <div id="rd3">
+    <label class="loon_labels"  for="yes_no_radio">Blood pressure</label>
+   <p>
+   <input type="radio" name="yes_no3">Yes</input>
+   </p>
+   <p>
+   <input type="radio" name="yes_no3">No</input>
+   </p>
+  </div>
+</div>
+</div>
+<!-- upload unit -->
+<form method="post" enctype="multipart/form-data" action="/Result/">
+    {% csrf_token %}
+<div class="position_img">
+  <h2 id="img_header">Upload your MRI image</h2>
+  <input name="imgPath"  type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+
+</div>
+
+  <input id="save_btn" type="submit"  onclick="alert('succefully added')" value="Save" />
+</form>
+<!-- end of upload unit -->
+
+<script src="C:\Users\Carlos\Django\projects\mysite\mysite\static\New-patiantjs\patiant.js"></script>
+<script>const image_input = document.querySelector("#image-input");
+
+  image_input.addEventListener("change", function() {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      const uploaded_image = reader.result;
+      document.querySelector("#image-input").style.backgroundImage = `url(${uploaded_image})`;
+    });
+    reader.readAsDataURL(this.files[0]);
+  });
+  </script>
+
+</body>
+</html>
